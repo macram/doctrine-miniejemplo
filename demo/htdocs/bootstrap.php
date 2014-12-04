@@ -14,7 +14,7 @@ $dbParams = array(
     'driver'   => 'pdo_pgsql',// Driver que utilizaremos para conectarnos
     'user'     => 'postgres', // Usuario de la base de datos
     'password' => '12345',    // Contraseña de la base de datos
-    'dbname'   => 'Doctrine',      // Nombre de la base de datos de nuestro proyecto
+    'dbname'   => 'Doctrine', // Nombre de la base de datos de nuestro proyecto
 );
 
 // obtaining the entity manager

@@ -1,6 +1,6 @@
 <?php
 	if (!empty($_GET)) {	
-		$empleado = $entityManager->find('Empleado',$_GET['id']);
+		if ($_GET['id']!="") $empleado = $entityManager->find('Empleado',$_GET['id']);
 	}
 ?>
 <h1>Inserción de empleados</h1>

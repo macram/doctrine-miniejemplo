@@ -1,8 +1,10 @@
 <?php
 
+require_once "Departamento.php";
+
 /**
  * @Entity 
- * @Table(name="Empleados")
+ * @Table(name="Empleado")
  **/
 class Empleado 
 {
@@ -17,6 +19,9 @@ class Empleado
 
     /** @Column(type="float") **/
     protected $sueldo;
+	
+	/** @ManyToOne(targetEntity="Departamento", inversedBy="empleados")**/
+	protected $dpto;
     // Setters, getters
 	
 	public function setNombre($_nombre)
@@ -52,5 +57,15 @@ class Empleado
 	public function getSueldo()
 	{
 		return $this->sueldo;
+	}
+	
+	public function setDpto($_dpto)
+	{
+		$this->dpto = $_dpto;
+	}
+	
+	public function getDpto()
+	{
+		return $this->dpto;
 	}
 }
